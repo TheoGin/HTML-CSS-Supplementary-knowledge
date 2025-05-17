@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>固定+绝对定位练习</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .modal {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      .modal img {
+        width: 400px;
+        height: 200px;
+        background-color: #272731;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .adv {
+        width: 165px;
+        height: 243px;
+        padding-top: 145px;
+        position: fixed;
+        right: 0;
+        top: 50%;
+        margin-top: -125px;
+        background: url("assets/r_dj.png") no-repeat;
+      }
+
+      .adv img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border: 2px solid #d7a356;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="assets/page.jpg" alt="" />
+    <div class="modal">
+      <img src="assets/login.jpg" alt="">
+    </div>
+    <div class="adv">
+      <img src="./assets/r_code.jpg" alt="" />
+    </div>
+  </body>
+</html>
