@@ -46,7 +46,7 @@
   top: 50%;
   margin-top: -125px;
 
-  background: url("assets/r_dj.png") no-repeat;
+  background: url("../assets/r_dj.png") no-repeat;
   /* 父元素有背景图，希望其他元素不要有覆盖背景图，一般就会设置padding-top为图片的高度尺寸 */
   padding-top: 145px;
 
