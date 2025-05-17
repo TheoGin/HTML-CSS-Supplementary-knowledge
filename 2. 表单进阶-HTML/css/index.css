@@ -19,6 +19,7 @@ html {
   background-color: #081620;
 }
 
+/*  加.txt类名，设置表单统一样式 */
 .txt {
   width: 100%;
   border: 1px solid #ccc;
@@ -37,8 +38,6 @@ textarea.txt {
 textarea {
   resize: none;
 }
-
-/* 只有在radio、checkbox中checked才有效，所以不会影响其他的 */
 
 input:focus,
 select:focus {
@@ -76,6 +75,8 @@ input ~ span {
   color: #aaa;
 }
 
+
+/* 只有在radio、checkbox中checked才有效，所以不会影响其他的 */
 input:checked + span {
   color: #333;
 }
