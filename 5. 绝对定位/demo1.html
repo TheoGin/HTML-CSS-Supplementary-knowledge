@@ -4,73 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>固定+绝对定位练习</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      .page {
-        width: 100%;
-      }
-
-      .modal {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: 1;
-      }
-
-      .modal .login-img {
-        background-color: #272731;
-
-        /* ——————定位下的另一种居中方式—————— */
-        position: absolute;
-        /* 1. 定宽、定高 */
-        width: 400px;
-        height: 200px;
-        /* 2. 离上面50%、左边50%（但是左上角居中） */
-        left: 50%;
-        top: 50%;
-        /* 3. 调整到内容正中心的居中 */
-        /* 3.1 横向正中心居中：左外边距为宽度的负一半 */
-        margin-left: -200px;
-        /* 3.2 纵向正中心居中：上外边距为高度的负一半 */
-        margin-top: -100px;
-      }
-
-      .cat {
-        width: 165px;
-
-        /* 定位下的纵向居中 */
-        position: fixed;
-        height: 250px;
-        right: 0;
-        top: 50%;
-        margin-top: -125px;
-
-        background: url("assets/r_dj.png") no-repeat;
-        /* 父元素有背景图，希望其他元素不要有覆盖背景图，一般就会设置padding-top为图片的高度尺寸 */
-        padding-top: 145px;
-
-        /* 图片是行盒，靠右可以通过text-align */
-        text-align: right;
-      }
-
-      .cat .qrcode-img {
-        width: 100px;
-        height: 100px;
-        /* 不需要定位，可以通过父元素的padding-top和text-align来实现 */
-        /* position: absolute;
-        bottom: 0;
-        right: 0; */
-        border: 2px solid #d7a356;
-      }
-    </style>
+    <link rel="stylesheet" href="css/demo1.css">
   </head>
   <body>
     <img class="page" src="assets/page.jpg" alt="" />
