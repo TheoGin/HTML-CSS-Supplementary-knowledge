@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  outline: none;
+  outline-offset: 0;
+}
+
+button {
+  background-color: initial;
+}
+
+textarea {
+  resize: none;
+}
+
+/* 统一样式开始 */
+html {
+  color: #333;
+}
+
+body {
+  background-color: #081620;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+input {
+  height: 40px;
+  text-indent: 10px;
+}
+
+select,
+textarea {
+  height: 100px;
+  padding: 10px;
+}
+
+input:focus,
+select:focus {
+  border-color: #5589ef;
+}
+
+input::placeholder {
+  font-size: 14px;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  background-color: #5589ef;
+  color: #fff;
+  border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 13px;
+  /* 要设置高度！！！ */
+  height: 13px;
+}
+
+
+.form-item span {
+  color: #aaa;
+}
+
+/* 统一样式结束 */
+
+/* 通用样式开始 */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* 通用样式结束 */
+.container {
+  width: 400px;
+  background-color: #fff;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.container .h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container .form-item {
+  margin: 16px 0;
+  width: 340px;
+}
+
+.container .form-item.sncode input {
+  width: 160px;
+}
+
+.container .form-item.gender .title {
+  margin-right: 20px;
+}
+
+.container .form-item.gender label {
+  cursor: pointer;
+}
+
+/* .container .form-item.gender label input[type="radio"] {
+  width: 13px;
+  height: 13px;
+} */
+
+.container .form-item.gender label input[type="radio"]:checked + span {
+  color: #333;
+}
+
+.container .form-item.readme input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+.container .form-item.readme span {
+  font-size: 12px;
+}
+
+.container .form-item.readme input[type="checkbox"]:checked + span {
+  color: #333;
+}

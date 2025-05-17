@@ -4,29 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>用户注册</title>
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <form action="">
-      <h1 class="title">用户注册</h1>
+    <form class="container">
+      <h1>用户注册</h1>
+
       <div class="form-item">
         <!-- <input type="tel" placeholder="请输入11位手机号" max-length="11" /> -->
         <!-- update max-length to maxlength -->
         <input type="tel" placeholder="请输入11位手机号" maxlength="11" />
       </div>
-      <div class="form-item">
-        <input type="text" placeholder="请填写验证码" />
+
+      <div class="form-item sncode clearfix">
+        <input class="left" type="text" placeholder="请填写验证码" />
         <!-- 表单注册只会有一个提交按钮，而button默认类型为submit，改为button -->
-        <button type="button">发送验证码</button>
+        <button type="button" class="right">发送验证码</button>
       </div>
+
       <div class="form-item">
         <input type="password" placeholder="请输入密码" />
       </div>
+      
       <div class="form-item">
-        <input type="password" placeholder="请再次输入密码" />
+        <input type="password" placeholder="请再次确认密码" />
       </div>
-      <div class="form-item">
-        <input type="password" placeholder="请再次输入密码" />
-      </div>
+
       <div class="form-item">
         <select multiple>
           <option>爱好1</option>
@@ -41,34 +44,37 @@
           <option>爱好10</option>
         </select>
       </div>
-      <div class="form-item">
-        <div class="title">性别</div>
+
+      <div class="form-item gender clearfix">
+        <div class="left title">性别</div>
         <!-- 元素层级越深，越方便调样式 -->
-        <div>
+        <div class="left">
           <label>
             <!-- 性别默认选中 -->
             <input type="radio" name="gender" checked />
             <!-- 用元素包起来，方便调样式 -->
-            <span>男</span>
+            <span class="gender-txt">男</span>
           </label>
           <label>
             <input type="radio" name="gender" />
-            <span>女</span>
+            <span class="gender-txt">女</span>
           </label>
         </div>
       </div>
+
       <div class="form-item">
         <textarea name="" id="" placeholder="请填写个人简介"></textarea>
       </div>
-      <div class="form-item">
+      <div class="form-item readme">
         <label>
           <input type="checkbox" />
           <span>同意台湾是中国领土不可分割的一部分</span>
         </label>
       </div>
-      <div class="form-item">
-        <button type="submit">立即注册</button>
-        <button type="reset">重置表单</button>
+
+      <div class="form-item clearfix">
+        <button type="submit" class="left">立即注册</button>
+        <button type="reset" class="right">重置表单</button>
       </div>
     </form>
   </body>
