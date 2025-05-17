@@ -28,7 +28,7 @@
       .modal .login-img {
         background-color: #272731;
 
-        /* ————定位另一种居中方式———— */
+        /* ——————定位下的另一种居中方式—————— */
         position: absolute;
         /* 1. 定宽、定高 */
         width: 400px;
@@ -43,24 +43,31 @@
         margin-top: -100px;
       }
 
-      .adv {
+      .cat {
         width: 165px;
-        height: 243px;
-        /* 父元素有背景图，希望其他元素不要有覆盖背景图，一般就会设置padding-top */
-        padding-top: 145px;
+
+        /* 定位下的纵向居中 */
         position: fixed;
+        height: 250px;
         right: 0;
         top: 50%;
         margin-top: -125px;
+
         background: url("assets/r_dj.png") no-repeat;
+        /* 父元素有背景图，希望其他元素不要有覆盖背景图，一般就会设置padding-top为图片的高度尺寸 */
+        padding-top: 145px;
+
+        /* 图片是行盒，靠右可以通过text-align */
+        text-align: right;
       }
 
-      .adv img {
+      .cat .qrcode-img {
         width: 100px;
         height: 100px;
-        position: absolute;
+        /* 不需要定位，可以通过父元素的padding-top和text-align来实现 */
+        /* position: absolute;
         bottom: 0;
-        right: 0;
+        right: 0; */
         border: 2px solid #d7a356;
       }
     </style>
@@ -70,8 +77,10 @@
     <div class="modal">
       <img src="assets/login.jpg" alt="" class="login-img" />
     </div>
-    <div class="adv">
-      <img src="./assets/r_code.jpg" alt="" />
+
+    <!-- 国内有些浏览器会把带有adv类名的广告元素给去掉，防止广告不被去掉，可以用别的类名来做广告 -->
+    <div class="cat">
+      <img class="qrcode-img" src="./assets/r_code.jpg" alt="" />
     </div>
   </body>
 </html>
