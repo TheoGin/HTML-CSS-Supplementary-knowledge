@@ -60,11 +60,13 @@
 
 .aside .num::before {
   content: "";
-  display: block;
+  /* display: block;
+  float: left; */
+  /* 用行块盒就不用浮动 */
+  display: inline-block;
   width: 16px;
   height: 16px;
   background: url("../assets/icons.png") no-repeat -254px -60px;
-  float: left;
 }
 
 .aside .date {
