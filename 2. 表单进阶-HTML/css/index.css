@@ -13,42 +13,32 @@ select {
   outline-offset: 0;
 }
 
-button {
-  background-color: initial;
+/* 统一样式开始 */
+html {
+  color: #333;
+  background-color: #081620;
+}
+
+.txt {
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+select.txt,
+textarea.txt {
+  height: 100px;
+  padding: 10px;
 }
 
 textarea {
   resize: none;
 }
 
-/* 统一样式开始 */
-html {
-  color: #333;
-}
-
-body {
-  background-color: #081620;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  border-radius: 5px;
-}
-
-input {
-  height: 40px;
-  text-indent: 10px;
-}
-
-select,
-textarea {
-  height: 100px;
-  padding: 10px;
-}
+/* 只有在radio、checkbox中checked才有效，所以不会影响其他的 */
 
 input:focus,
 select:focus {
@@ -57,6 +47,10 @@ select:focus {
 
 input::placeholder {
   font-size: 14px;
+}
+
+label {
+  cursor: pointer;
 }
 
 button {
@@ -78,15 +72,12 @@ button:disabled {
   cursor: not-allowed;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  width: 13px;
-  /* 要设置高度！！！ */
-  height: 13px;
+input ~ span {
+  color: #aaa;
 }
 
-.form-item span {
-  color: #aaa;
+input:checked + span {
+  color: #333;
 }
 
 /* 统一样式结束 */
@@ -125,7 +116,7 @@ input[type="checkbox"] {
   width: 340px;
 }
 
-.container .form-item.sncode input {
+.container .form-item.captcha input {
   width: 160px;
 }
 
@@ -133,27 +124,8 @@ input[type="checkbox"] {
   margin-right: 20px;
 }
 
-.container .form-item.gender label {
-  cursor: pointer;
-}
-
-/* .container .form-item.gender label input[type="radio"] {
-  width: 13px;
-  height: 13px;
-} */
-
-.container .form-item.gender label input[type="radio"]:checked + span {
-  color: #333;
-}
-
-.container .form-item.readme input[type="checkbox"] {
-  vertical-align: middle;
-}
-
-.container .form-item.readme span {
+.container .form-item.policy span {
   font-size: 12px;
-}
-
-.container .form-item.readme input[type="checkbox"]:checked + span {
-  color: #333;
+  /* 给两个行盒（或行块盒）任意一个设置都可以 */
+  vertical-align: 2px;
 }
