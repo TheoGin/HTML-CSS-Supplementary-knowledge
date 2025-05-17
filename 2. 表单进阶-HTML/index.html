@@ -42,12 +42,20 @@
         </select>
       </div>
       <div class="form-item">
-        <span>性别</span>
-        <label>
-          <!-- 性别默认选中 -->
-          <input type="radio" name="gender" checked />男
-        </label>
-        <label> <input type="radio" name="gender" />女 </label>
+        <div class="title">性别</div>
+        <!-- 元素层级越深，越方便调样式 -->
+        <div>
+          <label>
+            <!-- 性别默认选中 -->
+            <input type="radio" name="gender" checked />
+            <!-- 用元素包起来，方便调样式 -->
+            <span>男</span>
+          </label>
+          <label>
+            <input type="radio" name="gender" />
+            <span>女</span>
+          </label>
+        </div>
       </div>
       <div class="form-item">
         <textarea name="" id="" placeholder="请填写个人简介"></textarea>
@@ -55,7 +63,7 @@
       <div class="form-item">
         <label>
           <input type="checkbox" name="" id="" />
-          同意台湾是中国领土不可分割的一部分
+          <span>同意台湾是中国领土不可分割的一部分</span>
         </label>
       </div>
       <div class="form-item">
