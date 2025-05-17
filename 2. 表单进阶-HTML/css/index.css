@@ -67,6 +67,10 @@ button {
   border-radius: 5px;
 }
 
+button:hover {
+    background-color: #739cee;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   width: 13px;
@@ -105,7 +109,7 @@ input[type="checkbox"] {
   padding: 30px;
 }
 
-.container .h1 {
+.container h1 {
   text-align: center;
   margin-bottom: 30px;
 }
