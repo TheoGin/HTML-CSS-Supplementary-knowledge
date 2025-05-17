@@ -69,6 +69,8 @@
   width: 16px;
   height: 16px;
   background: url("../assets/icons.png") no-repeat -254px -62px;
+  vertical-align: -3px;
+  margin-right: 3px;
 }
 
 .aside .date {
