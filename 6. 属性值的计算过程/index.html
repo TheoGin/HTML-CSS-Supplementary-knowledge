@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 相对单位，如百分比、em、rem等，也是在属性值的计算过程算出 绝对单位px */
+      /* .container {
+        color: red;
+        width: 100%;
+      } */
+      /* .container a {
+        color: red;
+        text-decoration: none;
+      } */
+
+      /* *是作者样式表，在比较重要性的时候，就大于了浏览器默认样式表 */
+      /* * {
+        margin: 0;
+        padding: 0;
+      } */
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container1 {
+        color: red;
+        /* auto属性值，也是在属性值的计算过程算出 绝对单位px */
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        background: lightblue;
+      }
+      .container2 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <a href="">百度</a>
+      <p>一个段落</p>
+    </div>
+
+    <div class="container2">
+      <a href="">百度</a>
+      <p>一个段落</p>
+    </div>
+  </body>
+</html>
